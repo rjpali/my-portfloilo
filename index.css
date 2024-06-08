@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(7, 2, 56);
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background:rgb(7, 2, 56);
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(129, 131, 255);
+    border-radius: 20px;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav {
+    display: flex;
+    width: max-content;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 0 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+header nav .logo {
+    width: 150px;
+    margin: 20px 50px;
+    float: left;
+    height: 80px;
+    animation-name: upper-logo;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes  upper-logo {
+   0%{
+      margin: -100px 0;
+   }    
+
+   100%{
+    margin: 20px 50px;
+   }
+}
+
+header nav ul {
+    margin: 55px 600px;
+    float: right;
+}
+
+.active {
+    color: yellow;
+}
+
+/* navigation bar ancher tags hover effect */
+
+header nav ul li a:before{
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 0;
+height: 3px;
+background-color: yellow;
+transition: width .5s;
+margin: -2px 0;
+}
+
+header nav ul li a:hover:before{
+width: 100%;
+}
+
+/*first section*/
+.first-section .images img {
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 70%;
+    border-bottom-left-radius: 40%;
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 100px rgb(0, 255, 242);
+    margin: -470px 160px;
+    float: right;
+    animation-name: forward-img;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes forward-img {
+    0%{
+        margin: 20px -1000px;
+    }
+
+    100%{
+        margin: 20px 160px;
+    }
+}
+
+#aniB img{
+    animation-name: BorderAnimation;
+    animation-duration: 3s;
+    animation-timing-function: initial;
+    animation-iteration-count: infinite;
+}
+
+@keyframes BorderAnimation {
+    0%{
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 40%;
+        border-bottom-left-radius: 40%;
+    }
+
+    50%{
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 30%;
+        border-bottom-left-radius:30%;
+        border-top-left-radius: 100%;
+        box-shadow:  0 0 40px white;
+    }
+
+    60%{
+        box-shadow: 0 0 50px rgb(0, 255, 242);
+    }
+    100%{
+        border-top-right-radius:55%;
+        border-bottom-right-radius: 40%;
+        border-bottom-left-radius: 40%;
+    }
+}
+.first-section .text {
+    margin: 100px 100px;
+    float: left;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    animation-name: forward-dir;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+
+
+@keyframes forward-dir {
+    0% {
+        margin: 100px -1000px;
+        display: none;
+    }
+
+    100%{
+       margin: 100px 100px;
+    }
+}
+
+
+.first-section .text h4 {
+    color: rgba(255, 255, 0, 0.473);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: justify;
+}
+
+
+.first-section .text h1 {
+    color: white;
+    font-size: 50px;
+    width: 600px;
+}
+
+.first-section .text p {
+    width: 450px;
+    text-align: justify;
+    color: gray;
+}
+
+.first-section .btn button{
+    padding: 15px 30px; 
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-shadow: 0 0 10px #1a1a1a;
+    position: absolute;
+    top: 600px;
+    left: 95px;
+}
+
+.first-section .btn img{
+    margin: -3px 0;
+}
+
+
+/* some bacground animation */
+
+.first-section .animatedddd-sec-border{
+    width: 40%;
+    height: 7%;
+    position: absolute;
+    border: 10px solid transparent; /* This will be the dynamic inner border */
+    border-image: 
+        linear-gradient(135deg, #00a2ff, #1a1a1a), /* Border color */
+        linear-gradient(#00a2ff, #1a1a1a); /* Glow color */
+    border-image-slice: 1;
+    box-shadow: 0 0 20px rgba(0, 162, 255, 0.8); /* Glow effect */
+    top:265px;
+    left: 95px;
+    border-radius: 20px;
+    animation-name: New-forward-dir;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes New-forward-dir {
+    0% {
+        margin: 0px -1000px;
+        display: none;
+    }
+
+    100%{
+       margin: 0px 0px;
+    }
+}
